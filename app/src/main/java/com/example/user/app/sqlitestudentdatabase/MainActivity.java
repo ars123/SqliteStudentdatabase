@@ -44,14 +44,18 @@ public class MainActivity extends AppCompatActivity {
                 lastName = editLastName.getText().toString();
                 teacherName = editTeacherName.getText().toString();
                 rollNumber = editRollNo.getText().toString();
+                
+                if(firstName.trim().length()>0 && lastName.trim().length()>0 && teacherName.trim().length()>0 && rollNumber.trim().length()>0) {
 
-                StudentDatabaseHelper db = new StudentDatabaseHelper(getApplicationContext());
-                db.insertStudentInfo(firstName,lastName,teacherName,rollNumber);
-                Toast.makeText(MainActivity.this, "Student data is successfully stored", Toast.LENGTH_SHORT).show();
+                    StudentDatabaseHelper db = new StudentDatabaseHelper(getApplicationContext());
+                    db.insertStudentInfo(firstName, lastName, teacherName, rollNumber);
+                    Toast.makeText(MainActivity.this, "Student data is successfully stored", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
-                startActivity(intent);
-
+                    Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(MainActivity.this, "Please enter student details to store", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

@@ -12,6 +12,18 @@
     tools:context="com.example.user.app.sqlitestudentdatabase.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Student Details"
+        android:layout_alignParentTop="true"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="top|center_horizontal"
+        />
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -20,8 +32,10 @@
         android:hint="Enter First Name"
         android:ems="10"
         android:singleLine="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/lastName"
+        android:layout_alignStart="@+id/lastName"
+        android:layout_marginTop="47dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -53,8 +67,10 @@
         android:singleLine="true"
         android:ems="10"
         android:id="@+id/rollNum"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/teacherName"
+        android:layout_alignLeft="@+id/teacherName"
+        android:layout_alignStart="@+id/teacherName"
+        android:layout_marginTop="38dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -64,5 +80,7 @@
         android:layout_below="@+id/rollNum"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp" />
+
+
 
 </RelativeLayout>
