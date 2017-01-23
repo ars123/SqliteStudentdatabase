@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
                 firstName = editFirstName.getText().toString();
                 lastName = editLastName.getText().toString();
                 teacherName = editTeacherName.getText().toString();
